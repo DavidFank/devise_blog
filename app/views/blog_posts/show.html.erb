@@ -5,7 +5,7 @@
      <%= @blog_post.title %>
    </div>
    <div class="panel-body">
-     <%= @blog_post.author %>
+     <%= @blog_post.user.email %>
      <%= @blog_post.blog_entry %>
    </div>
  </div>
@@ -16,7 +16,7 @@
 	</div>
 	<div class="panel-body">
 	<% @blog_post.comments.each do |comment| %>
-	<p><strong><%= commment.author%></strong></p>
+	<p><strong><%= commment.user.email%></strong></p>
 	<p><%= comment.comment_entry %></p>
 	<% end %>
 	</div>
